@@ -7,6 +7,20 @@ namespace Hello
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+            foreach (var item in args)
+            {
+                Console.WriteLine("Witaj " + item);
+            }
+            foreach (var item in args)
+            {
+                Console.WriteLine("Witaj " + item);
+            }
+            foreach (var item in args)
+            {
+                Console.WriteLine("Witaj " + item);
+            }
+
         }
     }
 }
