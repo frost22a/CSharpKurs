@@ -12,7 +12,7 @@ namespace Hello
             {
                 Console.WriteLine("Witaj " + item);
             }
-                      
+            Console.WriteLine("elo!");           
 
         }
     }
