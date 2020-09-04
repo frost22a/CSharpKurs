@@ -41,5 +41,6 @@ namespace StudentDiary
         {
             return Ratings.Min();
         }
+
     }
 }
