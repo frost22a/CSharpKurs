@@ -7,11 +7,9 @@ namespace StudentDiary
 {
     class Diary
     {
-        //Stan -> zmienne (pola)
-        public List<float> Ratings { get; set; }
-
-
-
+        //Stan -> zmienne (pola) -> trzeba zaincjować zmienną - > w tym wypadku new 
+        List<float> Ratings = new List<float>();
+        
         //Zachowania -> metody 
         public void AddRating(float rating) 
         {
@@ -25,7 +23,7 @@ namespace StudentDiary
             
             foreach (var rating in Ratings)
             {
-                sum = +rating;
+                sum += rating;
             }
 
             avg = sum / Ratings.Count();
