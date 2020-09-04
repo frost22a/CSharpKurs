@@ -4,6 +4,7 @@ namespace Hello
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -13,6 +14,7 @@ namespace Hello
                 Console.WriteLine("Witaj " + item);
             }
             Console.WriteLine("elo!");           
+            
 
         }
     }
