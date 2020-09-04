@@ -14,43 +14,50 @@ namespace StudentDiary
 
             // dodajemy pierwszą ocenę -> zmienna PLUS "." -> korzystamy ze zdefiniowanych metod
 
-            //diary.AddRating(5);
-            //diary.AddRating(8.5f); //f za liczbą -> typ float 
-            //diary.AddRating(4.7f);
+            diary.AddRating(5);
+            diary.AddRating(8.5f); //f za liczbą -> typ float 
+            diary.AddRating(4.7f);
+
+            DiaryStatistics stats = diary.ComputeStats();
+
+            Console.WriteLine("średnia wartość " + stats.AverageGrade);
+            Console.WriteLine("max wartość " + stats.MaxGrade);
+            Console.WriteLine("min wartość " + stats.MinGrade);
 
             //var avg = diary.CalculateAverage();
             //var max = diary.GiveMaxRating();
             //var min = diary.GiveMinRating();
 
-            for ( ; ; ) // pętla nieskończona
-            {
-                Console.Write("Podaj ocenę z zakresu 1 - 10 (aby zakończyć wpisz 11): ");
-                float rating; 
-                bool isFloat = float.TryParse(Console.ReadLine(), out rating);
+            //for ( ; ; ) // pętla nieskończona
+            //{
+            //    Console.Write("Podaj ocenę z zakresu 1 - 10 (aby zakończyć wpisz 11): ");
+            //    float rating; 
+            //    bool isFloat = float.TryParse(Console.ReadLine(), out rating);
 
-                if (rating == 11)
-                {
-                    break;
-                }
+            //    if (rating == 11)
+            //    {
+            //        break;
+            //    }
                 
-                if (isFloat)
-                {
-                    if (rating > 0 && rating <= 10)
-                    {
-                        diary.AddRating(rating);
-                    }
-                    else 
-                    {
-                        Console.WriteLine("Niepoprawna ocena, wpisz ponownie (z zakresu 1 -10)");
-                    }
-                }
+            //    if (isFloat)
+            //    {
+            //        if (rating > 0 && rating <= 10)
+            //        {
+            //            diary.AddRating(rating);
+            //        }
+            //        else 
+            //        {
+            //            Console.WriteLine("Niepoprawna ocena, wpisz ponownie (z zakresu 1 -10)");
+            //        }
+            //    }
                 
-            }
+            //}
 
-            Console.WriteLine("Średnia Twoich ocen to " + diary.CalculateAverage());
-            Console.WriteLine("Najwyższa ocena to " + diary.GiveMaxRating());
-            Console.WriteLine("Najniższa Twoich ocen to " + diary.GiveMinRating());
-            Console.ReadKey();
+            //Console.WriteLine("Średnia Twoich ocen to " + diary.CalculateAverage());
+            //Console.WriteLine("Najwyższa ocena to " + diary.GiveMaxRating());
+            //Console.WriteLine("Najniższa Twoich ocen to " + diary.GiveMinRating());
+            //Console.ReadKey();
+
         }
     }
 }
