@@ -4,6 +4,15 @@ namespace Typy
 {
     class Program
     {
+        static void GiveName(Diary diary) 
+        {
+            diary.Name = "Dzienniczek Marcina";
+        }
+
+        static void IncermentNumer(int number) 
+        {
+            number++;
+        }
         static void Main(string[] args)
         {
             // tworzymy NOWY obiekt dzienniczek - instancję klasy Diary - > słowo kluczowe NEW
@@ -25,25 +34,43 @@ namespace Typy
 
             //DiaryStatistics ststs = diary.ComputeStats();
 
-            Diary d1 = new Diary();
-            Diary d2 = d1;
+            //Diary d1 = new Diary();
+            //Diary d2 = d1;
 
-            d1.Name = "Dzienniczek Marty";
+            //GiveName(d1);
+            //Console.WriteLine(d2.Name);
 
-            d1 = new Diary();
+            //d1.Name = "Dzienniczek Marty";
 
-            d1.Name = "Dzienniczek Marcina";
+            //d1 = new Diary();
 
-            Console.WriteLine("d2 name:" + d2.Name);
-            Console.WriteLine("d1 name: " + d1.Name);
+            //d1.Name = "Dzienniczek Marcina";
 
-            int x1 = 4;
-            int x2 = x1;
+            //Console.WriteLine("d2 name:" + d2.Name);
+            //Console.WriteLine("d1 name: " + d1.Name);
 
-            x1 = 100;
-            Console.WriteLine(x2);
+            //int x1 = 4;
+            //IncermentNumer(x1);
+
+            //Console.WriteLine(x1);
+
+            Immutable();
            
             
+        }
+
+        private static void Immutable()
+        {
+            string name = " Marcin ";
+            //name.Trim(); -> wywołanie tej metody nic nie da, ponieważ string jest niezmienny (jak większość typów warościowych)
+            // aby zadziałało musimy przypisać ponownie do zmiennej wynik działania funkcji TRIM (może być wcześniej zdefiniowana zmienna), czyli:
+            name = name.Trim();
+            Console.WriteLine(name);
+
+            DateTime date = new DateTime(2020,09,05);
+            // date.AddHours(48); działa jak powyżej , czyli trzeba:
+            date = date.AddHours(48);
+            Console.WriteLine(date);
         }
     }
 }
