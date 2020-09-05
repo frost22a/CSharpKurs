@@ -7,13 +7,18 @@ namespace Section10
 {
     class Diary
     {
+        
         //Stan -> zmienne (pola) -> trzeba zaincjować zmienną - > w tym wypadku new 
         List<float> Ratings = new List<float>();
         
         //Zachowania -> metody 
         public void AddRating(float rating) 
         {
-            Ratings.Add(rating);
+            if (rating <= 0 && rating >=10)
+            {
+                Ratings.Add(rating);
+            }
+            
         }
 
         public float CalculateAverage()
