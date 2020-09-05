@@ -37,6 +37,12 @@ namespace Typy
             Console.WriteLine("d2 name:" + d2.Name);
             Console.WriteLine("d1 name: " + d1.Name);
 
+            int x1 = 4;
+            int x2 = x1;
+
+            x1 = 100;
+            Console.WriteLine(x2);
+           
             
         }
     }
