@@ -4,15 +4,15 @@ namespace Typy
 {
     class Program
     {
-        static void GiveName(Diary diary) 
-        {
-            diary.Name = "Dzienniczek Marcina";
-        }
+        //static void GiveName(Diary diary) 
+        //{
+        //    diary.Name = "Dzienniczek Marcina";
+        //}
 
-        static void IncermentNumer(int number) 
-        {
-            number++;
-        }
+        //static void IncermentNumer(int number) 
+        //{
+        //    number++;
+        //}
         static void Main(string[] args)
         {
             // tworzymy NOWY obiekt dzienniczek - instancję klasy Diary - > słowo kluczowe NEW
@@ -54,23 +54,50 @@ namespace Typy
 
             //Console.WriteLine(x1);
 
-            Immutable();
-           
+            // Immutable();
+
+            Arrays();
+        }
+
+        private static void Arrays()
+        {
+            float[] ratings = new float[4]; //[] - oznacza tablicę
+
+            AddRatings(ratings);
+
+            foreach (var rating in ratings)
+            {
+                Console.WriteLine(rating);
+            }
+            
             
         }
 
-        private static void Immutable()
+        private static void AddRatings(float[] ratings)
         {
-            string name = " Marcin ";
-            //name.Trim(); -> wywołanie tej metody nic nie da, ponieważ string jest niezmienny (jak większość typów warościowych)
-            // aby zadziałało musimy przypisać ponownie do zmiennej wynik działania funkcji TRIM (może być wcześniej zdefiniowana zmienna), czyli:
-            name = name.Trim();
-            Console.WriteLine(name);
-
-            DateTime date = new DateTime(2020,09,05);
-            // date.AddHours(48); działa jak powyżej , czyli trzeba:
-            date = date.AddHours(48);
-            Console.WriteLine(date);
+            //ratings = new float[10]; - jeżeli to wywołamy, to powstanie referencja do nowej tablicy i nie będzie w zmian w powyższej
+            if (ratings.Length >= 4)
+            {
+                ratings[0] = 4.2f;
+                ratings[1] = 6.7f;
+                ratings[2] = 3f;
+                ratings[3] = 8.5f;
+            }
+            
         }
+
+        //private static void Immutable()
+        //{
+        //    string name = " Marcin ";
+        //    //name.Trim(); -> wywołanie tej metody nic nie da, ponieważ string jest niezmienny (jak większość typów warościowych)
+        //    // aby zadziałało musimy przypisać ponownie do zmiennej wynik działania funkcji TRIM (może być wcześniej zdefiniowana zmienna), czyli:
+        //    name = name.Trim();
+        //    Console.WriteLine(name);
+
+        //    DateTime date = new DateTime(2020,09,05);
+        //    // date.AddHours(48); działa jak powyżej , czyli trzeba:
+        //    date = date.AddHours(48);
+        //    Console.WriteLine(date);
+        //}
     }
 }
