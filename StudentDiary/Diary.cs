@@ -7,9 +7,24 @@ namespace StudentDiary
 {
     class Diary
     {
+        public Diary()
+        {
+            Ratings = new List<float>();
+            Counter++;
+            Counter2++;
+            
+        }
         //Stan -> zmienne (pola) (WŁAŚCIWOŚCI) -> trzeba zaincjować zmienną - > w tym wypadku new 
         List<float> Ratings = new List<float>();
-        
+
+        // 
+        public static float MaxGrade = 10;
+        public static float MinGrade = 0;
+        public static int Counter = 0;
+
+        public int Counter2 = 0;
+
+
         //Zachowania -> metody 
         public void AddRating(float rating) 
         {
