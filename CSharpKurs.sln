@@ -5,13 +5,15 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hello", "Hello\Hello.csproj", "{CA8C0910-1966-4D9E-B3CF-1F44C0C566D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentDiary", "StudentDiary\StudentDiary.csproj", "{B7F76FEE-2B30-412D-9CB5-5FAEDAAA4EDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentDiary", "StudentDiary\StudentDiary.csproj", "{B7F76FEE-2B30-412D-9CB5-5FAEDAAA4EDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constructors", "Constructors\Constructors.csproj", "{177FD16C-A779-4427-883F-1E3019351EF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Constructors", "Constructors\Constructors.csproj", "{177FD16C-A779-4427-883F-1E3019351EF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section10", "Section10\Section10.csproj", "{84C03D61-8213-48AB-A18D-223ACBD0E03E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Section10", "Section10\Section10.csproj", "{84C03D61-8213-48AB-A18D-223ACBD0E03E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Typy", "Typy\Typy.csproj", "{37948A0F-9290-41DB-BFBE-3BB138A67125}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Typy", "Typy\Typy.csproj", "{37948A0F-9290-41DB-BFBE-3BB138A67125}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Typy.Tests", "Typy.Tests\Typy.Tests.csproj", "{E908B268-565A-43FD-8F3C-7BEAE77BCF92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{37948A0F-9290-41DB-BFBE-3BB138A67125}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37948A0F-9290-41DB-BFBE-3BB138A67125}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37948A0F-9290-41DB-BFBE-3BB138A67125}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E908B268-565A-43FD-8F3C-7BEAE77BCF92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E908B268-565A-43FD-8F3C-7BEAE77BCF92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E908B268-565A-43FD-8F3C-7BEAE77BCF92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E908B268-565A-43FD-8F3C-7BEAE77BCF92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

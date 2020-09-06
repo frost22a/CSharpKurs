@@ -56,35 +56,35 @@ namespace Typy
 
             // Immutable();
 
-            Arrays();
+            //Arrays();
         }
 
-        private static void Arrays()
-        {
-            float[] ratings = new float[4]; //[] - oznacza tablicę
+      //private static void Arrays()
+      //  {
+      //      float[] ratings = new float[4]; //[] - oznacza tablicę
 
-            AddRatings(ratings);
+      //      AddRatings(ratings);
 
-            foreach (var rating in ratings)
-            {
-                Console.WriteLine(rating);
-            }
+      //      foreach (var rating in ratings)
+      //      {
+      //          Console.WriteLine(rating);
+      //      }
             
             
-        }
+      //  }
 
-        private static void AddRatings(float[] ratings)
-        {
-            //ratings = new float[10]; - jeżeli to wywołamy, to powstanie referencja do nowej tablicy i nie będzie w zmian w powyższej
-            if (ratings.Length >= 4)
-            {
-                ratings[0] = 4.2f;
-                ratings[1] = 6.7f;
-                ratings[2] = 3f;
-                ratings[3] = 8.5f;
-            }
+      //  private static void AddRatings(float[] ratings)
+      //  {
+      //      //ratings = new float[10]; - jeżeli to wywołamy, to powstanie referencja do nowej tablicy i nie będzie w zmian w powyższej
+      //      if (ratings.Length >= 4)
+      //      {
+      //          ratings[0] = 4.2f;
+      //          ratings[1] = 6.7f;
+      //          ratings[2] = 3f;
+      //          ratings[3] = 8.5f;
+      //      }
             
-        }
+      //  }  
 
         //private static void Immutable()
         //{

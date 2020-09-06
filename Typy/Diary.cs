@@ -5,14 +5,14 @@ using System.Text;
 
 namespace Typy
 {
-    class Diary
+    public class Diary
     {
         public Diary()
         {
             Ratings = new List<float>();                  
         }
         //Stan -> zmienne (pola) (WŁAŚCIWOŚCI) -> trzeba zaincjować zmienną - > w tym wypadku new 
-        private List<float> Ratings = new List<float>();
+        public List<float> Ratings = new List<float>();
         // do każdego nowego dzienniczka dodamy jego nazwę
         public string Name;
 
