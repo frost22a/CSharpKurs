@@ -7,12 +7,39 @@ namespace Members
 {
     class Diary
     {
+        // konstruktor
         public Diary()
         {
             Ratings = new List<float>();                    
         }
-        
-        List<float> Ratings = new List<float>();
+
+        //stan (zmienne - pola)
+        private List<float> Ratings = new List<float>();
+
+        private string _name;// nie ma dostępu do tego pola spoza klasy
+
+        public string Name//- > to jest pole, jak dodamy get, set mamy właściwość
+                            // do Name mamy dostęp spoza klasy -> jest public
+                            // dlatego, że mamy własne gettery i settery (dodajemy własną logikę) musimy mieć pole prywatne -> _name
+
+        {
+            get // get set - > akcesory
+            {
+                return _name.ToUpper();
+            }
+            set // używamy value
+            {
+                if (!string.IsNullOrEmpty(value))
+                {
+                    _name = value;
+                }
+            }
+        }
+
+        // VS skrót -> prop + tabtab, np.:
+        // public int MyProperty { get; set; }
+
+        //Zachowania
         public void AddRating(float rating) 
         {
             if (rating >= 0 && rating <= 10)
