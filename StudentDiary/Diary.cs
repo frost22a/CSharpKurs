@@ -28,7 +28,10 @@ namespace StudentDiary
         //Zachowania -> metody 
         public void AddRating(float rating) 
         {
-            Ratings.Add(rating);
+            if (rating <= 0 && rating >= 10)
+            {
+                Ratings.Add(rating);
+            }
         }
 
         //public float CalculateAverage()

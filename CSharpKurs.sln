@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Typy", "Typy\Typy.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Typy.Tests", "Typy.Tests\Typy.Tests.csproj", "{E908B268-565A-43FD-8F3C-7BEAE77BCF92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Members", "Members\Members.csproj", "{ECA1BB24-4B42-4901-A8E8-E635E7B8038D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{E908B268-565A-43FD-8F3C-7BEAE77BCF92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E908B268-565A-43FD-8F3C-7BEAE77BCF92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E908B268-565A-43FD-8F3C-7BEAE77BCF92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECA1BB24-4B42-4901-A8E8-E635E7B8038D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECA1BB24-4B42-4901-A8E8-E635E7B8038D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECA1BB24-4B42-4901-A8E8-E635E7B8038D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECA1BB24-4B42-4901-A8E8-E635E7B8038D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
