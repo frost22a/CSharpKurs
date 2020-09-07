@@ -31,12 +31,21 @@ namespace Members
             {
                 if (!string.IsNullOrEmpty(value))
                 {
+                    if (_name != value)
+                    {
+                        NameChanged(_name, value);
+                    }
+                    
                     _name = value;
                 }
             }
         }
 
-        // VS skrót -> prop + tabtab, np.:
+        //Delegat
+
+        public NameChangeDelegate NameChanged;
+
+        // VS skrót -> prop + tab tab, np.:
         // public int MyProperty { get; set; }
 
         //Zachowania
