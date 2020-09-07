@@ -15,16 +15,36 @@ namespace Members
 
             //DiaryStatistics stats = diary.ComputeStats();
 
-           
+
             //diary.Name = "";
             //diary.Name = null;
             //Console.WriteLine(diary.Name);
-            
 
-            diary.NameChanged += new NameChangeDelegate(NameChange); // "+=" dopisuje metodę do delegata, nie nadpisuje jej
-            diary.NameChanged += new NameChangeDelegate(NameChange2);
-            diary.NameChanged += new NameChangeDelegate(NameChange3);
-            diary.NameChanged += new NameChangeDelegate(NameChange4);
+
+            //diary.NameChanged += new NameChangeDelegate(NameChange); // "+=" dopisuje metodę do delegata, nie nadpisuje jej
+            //diary.NameChanged += new NameChangeDelegate(NameChange2);
+            //diary.NameChanged += new NameChangeDelegate(NameChange3);
+            //diary.NameChanged += new NameChangeDelegate(NameChange4);
+            //diary.NameChanged += new NameChangeDelegate(NameChange4);
+            //diary.NameChanged += new NameChangeDelegate(NameChange4);
+            //diary.NameChanged += new NameChangeDelegate(NameChange4);
+
+            //wersja prostsza:
+
+            diary.NameChanged += NameChange; // "+=" dodaj subskrybcję w event -= ją anuluje 
+            diary.NameChanged += NameChange2;
+            diary.NameChanged += NameChange3;
+            diary.NameChanged += NameChange4;
+            diary.NameChanged += NameChange4;
+            diary.NameChanged += NameChange4;
+            diary.NameChanged += NameChange4;
+            diary.NameChanged -= NameChange4;
+            diary.NameChanged -= NameChange4;
+            diary.NameChanged -= NameChange4;
+
+
+
+
             diary.Name = "Dzienniczek Marcina";
             diary.Name = "Jacek";
 
@@ -39,19 +59,19 @@ namespace Members
 
         }
 
-        private static void NameChange(string ExistingName, string NewName)
+        private static void NameChange(object Sender, NameChangedEventArgs args)
         {
-            Console.WriteLine($"Zmiana nazwy z {ExistingName} na {NewName}");
+            Console.WriteLine($"Zmiana nazwy z {args.ExistingName} na {args.NewName}");
         }
-         private static void NameChange2(string ExistingName, string NewName)
+         private static void NameChange2(object Sender, NameChangedEventArgs args)
         {
             Console.WriteLine("==========================");
         }
-        private static void NameChange3(string ExistingName, string NewName)
+        private static void NameChange3(object Sender, NameChangedEventArgs args)
         {
             Console.WriteLine("*************    ****************");
         }
-        private static void NameChange4(string ExistingName, string NewName)
+        private static void NameChange4(object Sender, NameChangedEventArgs args)
         {
             Console.WriteLine("ELO!");
         }

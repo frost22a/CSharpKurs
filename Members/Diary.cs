@@ -33,7 +33,10 @@ namespace Members
                 {
                     if (_name != value)
                     {
-                        NameChanged(_name, value);
+                        NameChangedEventArgs args = new NameChangedEventArgs();
+                        args.ExistingName = _name;
+                        args.NewName = value;
+                        NameChanged(this, args); // this - niejawna zmienna, która odwołuje się do obiektu nad którym pracujemy
                     }
                     
                     _name = value;
@@ -43,7 +46,7 @@ namespace Members
 
         //Delegat
 
-        public NameChangeDelegate NameChanged;
+        public event NameChangeDelegate NameChanged;
 
         // VS skrót -> prop + tab tab, np.:
         // public int MyProperty { get; set; }
