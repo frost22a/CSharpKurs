@@ -29,18 +29,20 @@ namespace Members
             }
             set // używamy value
             {
-                if (!string.IsNullOrEmpty(value))
+                if (string.IsNullOrEmpty(value))
                 {
-                    if (_name != value)
-                    {
-                        NameChangedEventArgs args = new NameChangedEventArgs();
-                        args.ExistingName = _name;
-                        args.NewName = value;
-                        NameChanged(this, args); // this - niejawna zmienna, która odwołuje się do obiektu nad którym pracujemy
-                    }
-                    
-                    _name = value;
+                    throw new ArgumentNullException("Nazwa nie może być pusta");
                 }
+                if (_name != value)
+                { 
+                     NameChangedEventArgs args = new NameChangedEventArgs();
+                     args.ExistingName = _name;
+                     args.NewName = value;
+                     NameChanged(this, args); // this - niejawna zmienna, która odwołuje się do obiektu nad którym pracujemy
+                }
+                    
+                _name = value;
+                
             }
         }
 
